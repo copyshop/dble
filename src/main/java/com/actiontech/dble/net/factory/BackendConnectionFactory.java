@@ -1,8 +1,8 @@
 /*
-* Copyright (C) 2016-2018 ActionTech.
-* based on code by MyCATCopyrightHolder Copyright (c) 2013, OpenCloudDB/MyCAT.
-* License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher.
-*/
+ * Copyright (C) 2016-2018 ActionTech.
+ * based on code by MyCATCopyrightHolder Copyright (c) 2013, OpenCloudDB/MyCAT.
+ * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher.
+ */
 package com.actiontech.dble.net.factory;
 
 import com.actiontech.dble.DbleServer;
@@ -17,8 +17,7 @@ import java.nio.channels.SocketChannel;
  */
 public abstract class BackendConnectionFactory {
 
-    protected NetworkChannel openSocketChannel(boolean isAIO)
-            throws IOException {
+    protected NetworkChannel openSocketChannel(boolean isAIO) throws IOException {
         if (isAIO) {
             return AsynchronousSocketChannel.open(DbleServer.getInstance().getNextAsyncChannelGroup());
         } else {
